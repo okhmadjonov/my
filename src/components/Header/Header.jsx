@@ -1,30 +1,42 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import i18next from "i18next";
+import { ReactComponent as LogoSvg } from "../../assets/img/logo.svg";
 import { CiUser, CiSearch, CiHeart, CiBag1 } from "react-icons/ci";
-import { BsBag } from "react-icons/bs";
+
 import "./Header.scss";
+import { useTranslation } from "react-i18next";
 const Header = () => {
+  const { t } = useTranslation();
+  const handleLanguage = (lang) => {
+    i18next.changeLanguage(lang);
+  };
   return (
     <div className="header">
       <div className="header__top">
         <div className="language">
-          <Link className="len">Uz</Link>
-          <Link className="len">Ru</Link>
-          <Link className="len">En</Link>
+          <Link className="len" onClick={() => handleLanguage("uz")}>
+            Uz
+          </Link>
+          <Link className="len" onClick={() => handleLanguage("ru")}>
+            Ru
+          </Link>
+          <Link className="len" onClick={() => handleLanguage("en")}>
+            En
+          </Link>
         </div>
       </div>
       <div className="header__container">
         <div className="header__inner">
           <div className="menu">
-            <Link className="menu_link">Каталог</Link>
-            <Link className="menu_link">lookbook</Link>
-            <Link className="menu_link">О бренде</Link>
-            <Link className="menu_link">информация</Link>
+            <Link className="menu_link">{t("headerTitle.1")}</Link>
+            <Link className="menu_link">{t("headerTitle.2")}</Link>
+            <Link className="menu_link">{t("headerTitle.3")}</Link>
+            <Link className="menu_link">{t("headerTitle.4")}</Link>
           </div>
           <div className="logo">
             <Link className="logo_blog" to="/">
-              My
+              <LogoSvg />
             </Link>
           </div>
           <div className="header__custom">
