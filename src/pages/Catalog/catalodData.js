@@ -1,0 +1,77 @@
+const catalogData = [
+  {
+    id: "1",
+    prioritate: "хит продаж",
+    imgUrl: "https://i.ibb.co/rfdLwFP/catalog1.png",
+    size: ["40", "42", "44", "46", "48"],
+    name: "Бомбер",
+    price: "5 000 ₽",
+  },
+
+  {
+    id: "2",
+    prioritate: "хит продаж",
+    imgUrl: "https://i.ibb.co/1sWW309/catalog2.png",
+    size: ["40", "42", "44", "46", "48"],
+    name: "Кожаная куртка",
+    price: "12 000 ₽",
+  },
+  {
+    id: "3",
+    prioritate: "последний размер",
+    imgUrl: "https://i.ibb.co/sR5DznY/catalog3.png",
+    size: ["40", "42", "44", "46", "48"],
+    name: "Тренч",
+    price: "4 000 ₽",
+  },
+  {
+    id: "4",
+    prioritate: "распродажа",
+    imgUrl: "https://i.ibb.co/JKn7QWw/catalog4.png",
+    size: ["40", "42", "44", "46", "48"],
+    name: "Рубашка",
+    price: "4 500 ₽",
+  },
+  {
+    id: "5",
+    prioritate: "",
+    imgUrl: "https://i.ibb.co/pxWKhPF/catalog5.png",
+    size: ["40", "42", "44", "46", "48"],
+    name: "Платье",
+    price: "8000 ₽",
+  },
+  {
+    id: "6",
+    prioritate: "распродажа",
+    imgUrl: "https://i.ibb.co/1vwXhGj/catalog6.png",
+    size: ["40", "42", "44", "46", "48"],
+    name: "Домашний комплект",
+    price: "4500 ₽",
+  },
+  {
+    id: "7",
+    prioritate: "",
+    imgUrl: "https://i.ibb.co/SnNHk1h/catalog7.png",
+    size: ["40", "42", "44", "46", "48"],
+    name: "Базовая водолазка",
+    price: "3000 ₽",
+  },
+  {
+    id: "8",
+    prioritate: "",
+    imgUrl: "https://i.ibb.co/sb135CY/catalog8.png",
+    size: ["40", "42", "44", "46", "48"],
+    name: "Базовая футболка",
+    price: "2000 ₽",
+  },
+  {
+    id: "9",
+    prioritate: "",
+    imgUrl: "https://i.ibb.co/Sv93vg9/catalog9.png",
+    size: ["40", "42", "44", "46", "48"],
+    name: "Классические брюки",
+    price: "5000 ₽",
+  },
+];
+
+export default catalogData;

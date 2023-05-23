@@ -59,7 +59,7 @@
       width: 410px;
       height: 200px;
       position: absolute;
-      top: 70%;
+      top: 60%;
       left: 48.2%;
 
       transform: translate(-50%, -50%);
@@ -126,4 +126,11 @@
   src: local("Lovelace"),
     url("../../assets/fonts/lovelace/Zetafonts - Lovelace Text Bold Italic.otf")
       format("truetype");
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    width: 100%;
+    height: 100%;
+  }
 }
