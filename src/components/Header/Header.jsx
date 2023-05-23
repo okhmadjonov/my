@@ -15,10 +15,7 @@ const Header = () => {
     <div className="header">
       <div className="header__top">
         <div className="header_info">
-          <p>
-            Бесплатная доставка при заказе от 10 000 руб по Москве и Московской
-            области
-          </p>
+          <p>{t("headerTitle.0")}</p>
         </div>
         <div className="language">
           <Link className="len" onClick={() => handleLanguage("uz")}>

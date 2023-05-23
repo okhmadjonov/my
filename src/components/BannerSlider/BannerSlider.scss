@@ -1,0 +1,129 @@
+.banner {
+  width: 100%;
+  height: 700px;
+  .banner__container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    .slider-container {
+      position: relative;
+
+      width: 100%;
+      height: 100%;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      height: 100%;
+    }
+
+    .photo {
+      width: 100%;
+
+      object-fit: cover;
+    }
+
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border: none;
+      display: none;
+    }
+
+    .next {
+      right: 0;
+    }
+
+    .prev:hover,
+    .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .caption {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+      width: 410px;
+      height: 200px;
+      position: absolute;
+      top: 70%;
+      left: 48.2%;
+
+      transform: translate(-50%, -50%);
+
+      .banner__title {
+        font-weight: 400;
+        font-size: 52px;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        font-family: "Lovelace";
+      }
+      .banner__catalog {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        gap: 10px;
+        font-size: 16px;
+        width: 149px;
+        height: 51px;
+        background: #dde8f6;
+        text-decoration: none;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #474a51;
+        margin-left: 38%;
+        font-family: "Jost", sans-serif;
+        &:hover {
+          color: #fff;
+          transition: all 0.3s ease-in-out;
+          background: #838e9c;
+        }
+      }
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0.3;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      .next,
+      .prev {
+        transition: all 5s ease-in-out;
+        display: block;
+      }
+    }
+  }
+}
+
+@font-face {
+  font-family: "Lovelace";
+  src: local("Lovelace"),
+    url("../../assets/fonts/lovelace/Zetafonts - Lovelace Text Bold Italic.otf")
+      format("truetype");
+}
