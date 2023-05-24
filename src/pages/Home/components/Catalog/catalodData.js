@@ -10,7 +10,7 @@ const catalogData = [
 
   {
     id: "2",
-    prioritate: "хит продаж",
+    prioritate: "новинка",
     imgUrl: "https://i.ibb.co/1sWW309/catalog2.png",
     size: ["40", "42", "44", "46", "48"],
     name: "Кожаная куртка",
