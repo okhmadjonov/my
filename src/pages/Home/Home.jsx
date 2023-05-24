@@ -4,6 +4,7 @@ import BannerSlider from "../../components/BannerSlider/BannerSlider";
 import NewAndSale from "./components/Catalog/NewAndSale/NewAndSale";
 import Catalog from "./components/Catalog/Catalog";
 import Lookbookblog from "./components/Lookbookblog/Lookbookblog";
+import Instablog from "./components/InstaBlog/Instablog";
 // import Lookbook from "./components/Lookbook/Lookbook";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
         <NewAndSale />
         <Catalog />
         <Lookbookblog />
+        <Instablog />
       </div>
     </div>
   );
