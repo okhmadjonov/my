@@ -1,0 +1,189 @@
+.lookbook {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+
+  .lookbook__container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: block;
+
+    h2 {
+      font-family: "Jost", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 130%;
+      text-transform: uppercase;
+      color: #474a51;
+    }
+    p {
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: #474a51;
+    }
+
+    .layer_one {
+      width: 100%;
+      height: 800px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .layer_one_left {
+        width: 100%;
+        height: 100%;
+
+        .layer__one__left__top {
+          width: 100%;
+          height: 20%;
+          display: grid;
+          grid-template-rows: 1fr 1fr 1fr;
+          margin-top: 110px;
+        }
+        .layer__one__left__bottom {
+          width: 100%;
+          height: 70%;
+
+          .bottom__top {
+            width: 50%;
+            height: 80%;
+            background-image: url("../../assets//img/lookbook1.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+          .bottom__bottom {
+            width: 70%;
+            height: 10%;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+
+      .layer_one_right {
+        width: 100%;
+        height: 100%;
+
+        .right__inner__top {
+          width: 100%;
+          height: 90%;
+          background-image: url("../../assets//img/lookbook2.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .right__inner__bottom {
+          width: 100%;
+          height: 10%;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    .layer__two {
+      width: 100%;
+      height: 800px;
+      margin-top: 50px;
+
+      .layer__two__inner {
+        width: 516px;
+        height: 100%;
+        margin-left: 250px;
+
+        .two__inner__top {
+          width: 100%;
+          height: 90%;
+          background-image: url("../../assets//img/lookbook3.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .two__inner__bottom {
+          width: 100%;
+          height: 10%;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+    // Layer two end
+
+    .layer__three {
+      width: 100%;
+      height: 650px;
+      display: flex;
+      .layer__three__left {
+        width: 50%;
+        height: 100%;
+
+        .layer__three__left__img {
+          width: 65%;
+          height: 90%;
+          background-image: url("../../assets//img/lookbook4.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .layer__three__left__nameprice {
+          width: 65%;
+          height: 10%;
+          display: flex;
+          align-items: center;
+        }
+      }
+      .layer__three__right {
+        width: 50%;
+        height: 100%;
+
+        .layer__three__right__img {
+          width: 100%;
+          height: 65%;
+          background-image: url("../../assets//img/lookbook5.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .layer__three__right__nameprice {
+          width: 100%;
+          height: 10%;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+
+    // Layer three  end
+    .fourth__layer {
+      width: 100%;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .fourth__layer__inner {
+        width: 300px;
+        height: 100%;
+
+        .fourth__layer__inner__img {
+          width: 100%;
+          height: 80%;
+          background-image: url("../../assets//img/lookbook6.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .fourth__layer__inner__nameprice {
+          width: 100%;
+          height: 10%;
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
+  }
+}

@@ -4,6 +4,7 @@ import "./App.scss";
 import Home from "../../pages/Home/Home";
 import Header from "../Header/Header";
 import About from "../../pages/About/About";
+import Lookbook from "../../pages/Lookbook/Lookbook";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/lookbook" element={<Lookbook />} />
         <Route path="*" element={<Navigate to="/" replace={true} />} />
       </Routes>
     </BrowserRouter>
