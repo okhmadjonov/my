@@ -9,7 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: #dde8f6;
+    // background-color: #dde8f6;
+    background-color: teal;
     gap: 180px;
 
     .header_info {
@@ -23,7 +24,8 @@
         cursor: pointer;
         font-family: "Jost", sans-serif;
         text-decoration: none;
-        color: #474a51;
+        // color: #474a51;
+        color: #fff;
         font-weight: 400;
         font-size: 14px;
       }
@@ -39,10 +41,15 @@
         cursor: pointer;
         font-family: "Jost", sans-serif;
         text-decoration: none;
-        color: #474a51;
+        // color: #474a51;
+        color: #fff;
         text-transform: uppercase;
         font-weight: 500;
         font-size: 14px;
+        &:hover {
+          transition: all 0.3s ease-in-out;
+          color: #474a51;
+        }
       }
     }
   }
