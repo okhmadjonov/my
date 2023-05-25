@@ -1,0 +1,216 @@
+.about {
+  width: 100%;
+
+  .about__container {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    h2 {
+      font-family: "Jost", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 52px;
+      line-height: 130%;
+      text-transform: uppercase;
+      color: #474a51;
+    }
+    p {
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: #474a51;
+    }
+
+    .about__loylen {
+      width: 100%;
+      height: 700px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .about__loylen__left {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eee;
+        .loylen__left__inner {
+          width: 440px;
+          height: 80%;
+          display: grid;
+          grid-template-rows: 1fr;
+          gap: 22px;
+
+          .inner__title {
+            width: 100%;
+            height: 100%;
+          }
+          .inner__subtitle_01 {
+            width: 407px;
+            height: 100%;
+          }
+
+          .inner__subtitle_02 {
+            width: 407px;
+            height: 100%;
+          }
+          .inner__subtitle_03 {
+            width: 407px;
+            height: 100%;
+          }
+        }
+      }
+      .about__loylen__right {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background-image: url("../../assets/img/about1.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+
+    .about__forwhoom {
+      width: 100%;
+      height: 700px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .about__forwhoom__left {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../assets/img/about2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      .about__forwhoom__right {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .forwhoom__inner {
+          width: 407px;
+          height: 50%;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 20px;
+
+          .inner__title {
+            width: 100%;
+            height: 84px;
+          }
+          .inner__subtitle_01 {
+            width: 100%;
+            height: 105px;
+          }
+          .inner__subtitle_02 {
+            width: 100%;
+            height: 105px;
+          }
+        }
+      }
+    }
+    .about__technical__produce {
+      width: 100%;
+      height: 700px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      .about__technical__produce__left {
+        width: 100%;
+        height: 100%;
+        background-color: #eee;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .produce__left__inner {
+          width: 535px;
+          height: 60%;
+          display: grid;
+          grid-template-columns: 1fr;
+
+          .produce__inner__title {
+            width: 100%;
+            height: 140px;
+          }
+          .produce__inner__subtitle_01 {
+            width: 407px;
+            height: 105px;
+          }
+          .produce__inner__subtitle_02 {
+            width: 407px;
+            height: 105px;
+          }
+        }
+      }
+
+      .about__technical__produce__right {
+        width: 100%;
+        height: 100%;
+        background-image: url("../../assets/img/about3.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about {
+    .about__container {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .about__loylen {
+        display: grid;
+        grid-template-columns: 1fr;
+        .about__loylen__left {
+          width: 100%;
+          height: 100%;
+
+          .loylen__left__inner {
+            display: grid;
+            grid-template-columns: 1fr;
+          }
+        }
+        .about__loylen__right {
+          width: 100%;
+          //   height: 100vh;
+        }
+      }
+      .about__forwhoom {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        .about__forwhoom__left {
+          width: 100%;
+          height: 100%;
+        }
+        .about__forwhoom__right {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .about__technical__produce {
+        display: grid;
+        grid-template-columns: 1fr;
+        .about__technical__produce__left {
+          width: 100%;
+          height: 100%;
+        }
+        .about__technical__produce__right {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

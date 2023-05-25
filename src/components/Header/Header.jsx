@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import i18next from "i18next";
 import { ReactComponent as LogoSvg } from "../../assets/img/logo.svg";
-import { CiUser, CiSearch, CiHeart, CiBag1 } from "react-icons/ci";
-
+import { CiUser, CiSearch, CiHeart } from "react-icons/ci";
+import { BsBag } from "react-icons/bs";
 import "./Header.scss";
 import { useTranslation } from "react-i18next";
 const Header = () => {
@@ -32,10 +32,18 @@ const Header = () => {
       <div className="header__container">
         <div className="header__inner">
           <div className="menu">
-            <Link className="menu_link">{t("headerTitle.1")}</Link>
-            <Link className="menu_link">{t("headerTitle.2")}</Link>
-            <Link className="menu_link">{t("headerTitle.3")}</Link>
-            <Link className="menu_link">{t("headerTitle.4")}</Link>
+            <Link to="/catalog" className="menu_link">
+              {t("headerTitle.1")}
+            </Link>
+            <Link to="/lookbook" className="menu_link">
+              {t("headerTitle.2")}
+            </Link>
+            <Link to="/about" className="menu_link">
+              {t("headerTitle.3")}
+            </Link>
+            <Link to="/information" className="menu_link">
+              {t("headerTitle.4")}
+            </Link>
           </div>
           <div className="logo">
             <Link className="logo_blog" to="/">
@@ -54,7 +62,7 @@ const Header = () => {
             </div>
             <div className="card">
               {/* <BsBag /> */}
-              <CiBag1 />
+              <BsBag />
               <span>0</span>
             </div>
           </div>
