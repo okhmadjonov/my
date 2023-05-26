@@ -7,8 +7,8 @@ import { Link } from "react-router-dom";
 
 const Catalog = () => {
   return (
-    <div className="catalog">
-      <div className="catalog__container">
+    <div className="catalog1">
+      <div className="catalog__container1">
         <div className="catalog__title">
           <h2>КАТАЛОГ</h2>
         </div>

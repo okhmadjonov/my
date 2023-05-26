@@ -1,0 +1,108 @@
+.information {
+  width: 100%;
+  height: 100%;
+  margin: 80px auto;
+
+  .information__container {
+    width: 100%;
+    height: 1200px;
+    max-width: 1280px;
+    margin: 0 auto;
+
+    h3 {
+      width: 100%;
+      height: 50px;
+      font-family: "Jost", sans-serif;
+      font-style: normal;
+      font-size: 24px;
+      line-height: 130%;
+      letter-spacing: 0.02em;
+      color: #474a51;
+      text-transform: uppercase;
+    }
+    .info__title {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        font-family: "Jost", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 52px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #474a51;
+      }
+    }
+    .info__context {
+      width: 100%;
+      height: 90%;
+      margin: 50px auto;
+
+      .place__order {
+        width: 100%;
+        height: 260px;
+        display: grid;
+        grid-template-rows: 1fr;
+
+        p {
+          width: 100%;
+          height: 60px;
+          margin-top: 5px;
+        }
+      }
+      .pay__order {
+        width: 100%;
+        height: 154px;
+        margin-top: 50px;
+
+        p {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .delivery {
+        width: 100%;
+        height: 100px;
+        margin-top: 50px;
+
+        p {
+          width: 100%;
+          height: auto;
+        }
+      }
+      .delivery__by__areas {
+        width: 100%;
+        height: 100%;
+
+        h4 {
+          width: 100%;
+          height: 25px;
+          font-family: "Jost", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          color: #474a51;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+          margin-top: 20px;
+        }
+        p {
+          width: 100%;
+          height: auto;
+          font-family: "Jost", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 130%;
+          color: #474a51;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

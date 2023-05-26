@@ -3,8 +3,8 @@ import "./Lookbookblog.scss";
 import { Link } from "react-router-dom";
 const Lookbookblog = () => {
   return (
-    <div className="lookbook">
-      <div className="lookbook__container">
+    <div className="lookbook1">
+      <div className="lookbook__container1">
         <div className="lookbook__img"></div>
         <div className="lookbook__description">
           <div className="lookbook__inner">
