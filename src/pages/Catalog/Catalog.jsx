@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import catalogData from "./catalodData";
 import { BsHeart } from "react-icons/bs";
 import "./Catalog.scss";
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
+import clothes from "./clothes";
+import colors from "./colors";
+import sizes from "./sizes";
 const Catalog = () => {
+  const [selectClothe, setSelectClothe] = useState(false);
+  const handleSelectClothe = () => {
+    setSelectClothe((current) => !current);
+  };
   return (
     <div className="catalog">
       <div className="catalog__container111">
@@ -24,8 +31,94 @@ const Catalog = () => {
             </div>
           </div>
           <div className="catalog__inner__bottom">
-            <div className="catalog__inner__bottom__left"></div>
+            <div className="catalog__inner__bottom__left">
+              <div className="categories">
+                <Link className="all__categories item">Все категории</Link>
+                <Link className="new__categories item">Новинки</Link>
+                <Link className="sale__categories item">Распродажа</Link>
+              </div>
+
+              <div className="clothes">
+                {clothes.map((item, index) => (
+                  <div className="clothes__item" key={index}>
+                    <div
+                      className="clothes__check"
+                      onClick={handleSelectClothe}>
+                      <div
+                        className={selectClothe ? "Box" : "Box-active"}></div>
+                    </div>
+                    <div className="clothes__name">{item.name} </div>
+                  </div>
+                ))}
+              </div>
+              <div className="colors">
+                <h2>Цвет</h2>
+                <div className="colors__content">
+                  {colors.map((item, index) => (
+                    <div className="colors__item" key={index}>
+                      <div
+                        className="color__check"
+                        onClick={handleSelectClothe}>
+                        <div
+                          className={selectClothe ? "Box" : "Box-active"}></div>
+                      </div>
+
+                      <div className="color__name">{item.name} </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              {/* /************************************************************ */}
+
+              <div className="sizes">
+                <h2>Размер</h2>
+                <div className="sizes__content">
+                  {sizes.map((item, index) => (
+                    <div className="sizes__item" key={index}>
+                      <div className="size__check" onClick={handleSelectClothe}>
+                        <div
+                          className={selectClothe ? "Box" : "Box-active"}></div>
+                      </div>
+
+                      <div className="size__name">{item.size} </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/*-----------------------------------Size End--------------------------------*/}
+
+              {/* -------------------цена-------------- */}
+              <div className="price">
+                <div className="price__title">
+                  <h2>цена</h2>
+                </div>
+                <div className="price__content">
+                  <p className="from">от</p>
+                  <input
+                    type="text"
+                    name="price"
+                    className="from__price"
+                    placeholder="999"
+                  />
+                  <p className="to">ДО</p>
+                  <input
+                    type="text"
+                    name="price"
+                    className="to__price"
+                    placeholder="20000"
+                  />
+                  <span className="rubl">руб.</span>
+                </div>
+              </div>
+              {/**--------------------------Price End-------------------- */}
+              <div className="clear">
+                <Link className="clear__filter">Очистить фильтр</Link>
+              </div>
+            </div>
+            {/* Left Side */}
             <div className="catalog__inner__bottom__right">
+              {/* Right Side */}
               <div className="catalog__products">
                 {catalogData.map((item, index) => (
                   <div key={item.id} className="catalog__card">
@@ -77,7 +170,7 @@ const Catalog = () => {
                   </div>
                 ))}
               </div>
-              <div className="show__all">
+              <div className="show__all1">
                 <Link className="all">посмотреть все</Link>
               </div>
             </div>

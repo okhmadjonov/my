@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import classNames from "classnames";
 import { Link } from "react-router-dom";
 import i18next from "i18next";
 import { ReactComponent as LogoSvg } from "../../assets/img/logo.svg";
@@ -6,11 +7,41 @@ import { CiUser, CiSearch, CiHeart } from "react-icons/ci";
 import { BsBag } from "react-icons/bs";
 import "./Header.scss";
 import { useTranslation } from "react-i18next";
+import { current } from "@reduxjs/toolkit";
 const Header = () => {
+  const [active, setActive] = useState(false);
+  const handleActive = () => {
+    setActive(!active);
+  };
   const { t } = useTranslation();
   const handleLanguage = (lang) => {
     i18next.changeLanguage(lang);
   };
+
+  const [count, setCount] = useState(0);
+  let step1 = false,
+    step2 = false,
+    step3 = false,
+    step4 = false,
+    step5 = false;
+
+  switch (count) {
+    case 1:
+      step1 = true;
+      break;
+    case 2:
+      step2 = true;
+      break;
+    case 3:
+      step3 = true;
+      break;
+    case 4:
+      step4 = true;
+      break;
+    case 5:
+      step5 = true;
+  }
+
   return (
     <div className="header">
       <div className="header__top">
@@ -32,16 +63,28 @@ const Header = () => {
       <div className="header__container">
         <div className="header__inner">
           <div className="menu">
-            <Link to="/catalog" className="menu_link">
+            <Link
+              to="/catalog"
+              onClick={() => handleActive()}
+              className={active ? "menu_link_active" : "menu_link"}>
               {t("headerTitle.1")}
             </Link>
-            <Link to="/lookbook" className="menu_link">
+            <Link
+              to="/lookbook"
+              className={step2 ? "menu_link_active" : "menu_link"}
+              onClick={() => setCount(2)}>
               {t("headerTitle.2")}
             </Link>
-            <Link to="/about" className="menu_link">
+            <Link
+              to="/about"
+              className={step3 ? "menu_link_active" : "menu_link"}
+              onClick={() => setCount(3)}>
               {t("headerTitle.3")}
             </Link>
-            <Link to="/information" className="menu_link">
+            <Link
+              to="/information"
+              className={step4 ? "menu_link_active" : "menu_link"}
+              onClick={() => setCount(4)}>
               {t("headerTitle.4")}
             </Link>
           </div>
@@ -52,7 +95,12 @@ const Header = () => {
           </div>
           <div className="header__custom">
             <div className="search">
-              <CiSearch />
+              <input
+                type="text"
+                className={step5 ? "search__field__active" : "search__field"}
+                placeholder="Search..."
+              />
+              <CiSearch onClick={() => setCount(5)} />
             </div>
             <div className="user">
               <CiUser />

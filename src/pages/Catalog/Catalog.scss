@@ -8,6 +8,23 @@
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    padding-bottom: 100px;
+
+    h2 {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      align-items: center;
+
+      font-family: "Jost", sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: #474a51;
+    }
 
     .catalog__inner {
       width: 100%;
@@ -26,6 +43,7 @@
           font-size: 52px;
           line-height: 130%;
           text-align: center;
+          color: #474a51;
           text-transform: uppercase;
         }
       }
@@ -75,17 +93,248 @@
       display: grid;
       align-items: center;
       grid-template-columns: 1fr 1fr;
-      //   justify-content: space-between;
 
       .catalog__inner__bottom__left {
         width: 300px;
         height: 100%;
-        border: 1px solid purple;
+
+        .categories {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          flex-direction: column;
+
+          .item {
+            text-decoration: none;
+            width: 100%;
+            height: 31px;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+            color: #474a51;
+
+            &:hover {
+              color: teal;
+              transition: all 0.3s ease-in-out;
+            }
+          }
+        }
+        .clothes {
+          width: 100%;
+          height: auto;
+
+          .clothes__item {
+            width: 100%;
+            height: 25px;
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 25px;
+            // border: 1px solid black;
+
+            .clothes__check {
+              cursor: pointer;
+              width: 20px;
+              height: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-top: 2px;
+              border: 1px solid #474a51;
+              .Box {
+                cursor: pointer;
+                width: 10px;
+                height: 10px;
+              }
+              .Box-active {
+                cursor: pointer;
+                width: 10px;
+                height: 10px;
+                background-color: teal;
+              }
+            }
+            .clothes__name {
+              cursor: pointer;
+              &:hover {
+                color: teal;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+        .colors {
+          width: 100%;
+          height: auto;
+          margin-top: 50px;
+          h2 {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+
+            font-family: "Jost", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 130%;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            color: #474a51;
+          }
+
+          .colors__item {
+            width: 100%;
+            height: 25px;
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 25px;
+
+            .color__check {
+              cursor: pointer;
+              width: 20px;
+              height: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-top: 2px;
+              border: 1px solid #474a51;
+              .Box {
+                cursor: pointer;
+                width: 10px;
+                height: 10px;
+              }
+              .Box-active {
+                cursor: pointer;
+                width: 10px;
+                height: 10px;
+                background-color: teal;
+              }
+            }
+            .color__name {
+              cursor: pointer;
+              &:hover {
+                color: teal;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+
+        /*--------------------------------------------------------------------------*/
+
+        .sizes {
+          width: 100%;
+          height: auto;
+          margin-top: 50px;
+
+          .sizes__item {
+            width: 100%;
+            height: 25px;
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 25px;
+
+            .size__check {
+              cursor: pointer;
+              width: 20px;
+              height: 20px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-top: 2px;
+              border: 1px solid #474a51;
+              .Box {
+                cursor: pointer;
+                width: 10px;
+                height: 10px;
+              }
+              .Box-active {
+                cursor: pointer;
+                width: 10px;
+                height: 10px;
+                background-color: teal;
+              }
+            }
+            .size__name {
+              cursor: pointer;
+              &:hover {
+                color: teal;
+                transition: all 0.3s ease-in-out;
+              }
+            }
+          }
+        }
+        /*----------------------------------------------Size end-----------------------------*/
+
+        .price {
+          width: 100%;
+          height: auto;
+          margin-top: 50px;
+
+          .price__content {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+              font-family: "Jost", sans-serif;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 130%;
+              color: #474a51;
+              text-transform: uppercase;
+            }
+            input[type="text"] {
+              box-sizing: border-box;
+              border: 1px solid #eee;
+              width: 70px;
+              height: 30px;
+              padding-left: 10px;
+              outline: none !important;
+            }
+          }
+        }
+        .clear {
+          width: 100%;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          margin-top: 50px;
+
+          .clear__filter {
+            text-decoration: none;
+            width: 155px;
+            height: 38px;
+            background: #9f9d9d;
+            color: #fff;
+            font-family: "Jost", sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+            padding: 10px 15px;
+            &:hover {
+              border: 1px solid #474a51;
+              transition: all 0.5s;
+              background-color: #fff;
+              color: #474a51;
+            }
+          }
+        }
       }
+
+      /**********************************************************************/
+
       .catalog__inner__bottom__right {
         width: 920px;
         height: 100%;
-        border: 1px solid teal;
 
         .catalog__products {
           width: 100%;
@@ -93,10 +342,10 @@
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
           gap: 20px;
+
           .catalog__card {
             width: 290px;
             height: 420px;
-            margin-top: 50px;
             display: flex;
             flex-direction: column;
 
@@ -266,12 +515,14 @@
             }
           }
         }
-        .show__all {
+        .show__all1 {
           width: 100%;
           height: 50px;
           display: flex;
           align-items: center;
+          margin-top: 50px;
           justify-content: center;
+
           .all {
             width: 202px;
             height: 51px;
