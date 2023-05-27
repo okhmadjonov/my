@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import classNames from "classnames";
+
 import { Link } from "react-router-dom";
 import i18next from "i18next";
 import { ReactComponent as LogoSvg } from "../../assets/img/logo.svg";
@@ -7,11 +7,11 @@ import { CiUser, CiSearch, CiHeart } from "react-icons/ci";
 import { BsBag } from "react-icons/bs";
 import "./Header.scss";
 import { useTranslation } from "react-i18next";
-import { current } from "@reduxjs/toolkit";
+
 const Header = () => {
   const [active, setActive] = useState(false);
   const handleActive = () => {
-    setActive(!active);
+    setActive((current) => !current);
   };
   const { t } = useTranslation();
   const handleLanguage = (lang) => {
@@ -22,8 +22,7 @@ const Header = () => {
   let step1 = false,
     step2 = false,
     step3 = false,
-    step4 = false,
-    step5 = false;
+    step4 = false;
 
   switch (count) {
     case 1:
@@ -38,8 +37,12 @@ const Header = () => {
     case 4:
       step4 = true;
       break;
-    case 5:
-      step5 = true;
+
+    default:
+      step1 = false;
+      step2 = false;
+      step3 = false;
+      step4 = false;
   }
 
   return (
@@ -65,8 +68,8 @@ const Header = () => {
           <div className="menu">
             <Link
               to="/catalog"
-              onClick={() => handleActive()}
-              className={active ? "menu_link_active" : "menu_link"}>
+              onClick={() => setCount(1)}
+              className={step1 ? "menu_link_active" : "menu_link"}>
               {t("headerTitle.1")}
             </Link>
             <Link
@@ -97,10 +100,10 @@ const Header = () => {
             <div className="search">
               <input
                 type="text"
-                className={step5 ? "search__field__active" : "search__field"}
+                className={active ? "search__field__active" : "search__field"}
                 placeholder="Search..."
               />
-              <CiSearch onClick={() => setCount(5)} />
+              <CiSearch onClick={handleActive} />
             </div>
             <div className="user">
               <CiUser />
