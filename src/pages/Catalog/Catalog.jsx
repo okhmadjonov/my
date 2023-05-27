@@ -8,10 +8,35 @@ import clothes from "./clothes";
 import colors from "./colors";
 import sizes from "./sizes";
 const Catalog = () => {
-  const [selectClothe, setSelectClothe] = useState(false);
-  const handleSelectClothe = () => {
-    setSelectClothe((current) => !current);
+  const [selectedClothes, setSelectedClothes] = useState([]);
+
+  const onClickSelectClothes = (item) => {
+    let index = selectedClothes.findIndex((x) => x === item.id);
+    if (index >= 0) selectedClothes.splice(index, 1);
+    else selectedClothes.push(item.id);
+    setSelectedClothes([...selectedClothes]);
   };
+  /*-----------------------------------------------------------------*/
+
+  const [colorSelect, setColorSelect] = useState([]);
+
+  const onClickSelectColor = (item) => {
+    let index = colorSelect.findIndex((x) => x === item.id);
+    if (index >= 0) colorSelect.splice(index, 1);
+    else colorSelect.push(item.id);
+    setColorSelect([...colorSelect]);
+  };
+
+  /**------------------------------------------------------ */
+
+  const [selectSize, setSelectSize] = useState([]);
+  const onClickSelectSize = (item) => {
+    let index = selectSize.findIndex((x) => x === item.id);
+    if (index >= 0) selectSize.splice(index, 1);
+    else selectSize.push(item.id);
+    setSelectSize([...selectSize]);
+  };
+
   return (
     <div className="catalog">
       <div className="catalog__container111">
@@ -25,7 +50,7 @@ const Catalog = () => {
             <div className="order__option">
               <p className="sortirovka">Сортировка</p>
               <select name="popular" id="popular">
-                <option value="popopulyarnosti">По популярности</option>
+                <option value="popopulyarnosti">Все</option>
                 <option value="popopulyarnosti">По популярности</option>
               </select>
             </div>
@@ -43,9 +68,12 @@ const Catalog = () => {
                   <div className="clothes__item" key={index}>
                     <div
                       className="clothes__check"
-                      onClick={handleSelectClothe}>
-                      <div
-                        className={selectClothe ? "Box" : "Box-active"}></div>
+                      onClick={onClickSelectClothes.bind(this, item)}>
+                      {selectedClothes.findIndex((x) => x === item.id) >= 0 ? (
+                        <div className="Box-active"></div>
+                      ) : (
+                        <div className="Box"></div>
+                      )}
                     </div>
                     <div className="clothes__name">{item.name} </div>
                   </div>
@@ -58,9 +86,12 @@ const Catalog = () => {
                     <div className="colors__item" key={index}>
                       <div
                         className="color__check"
-                        onClick={handleSelectClothe}>
-                        <div
-                          className={selectClothe ? "Box" : "Box-active"}></div>
+                        onClick={onClickSelectColor.bind(this, item)}>
+                        {colorSelect.findIndex((x) => x === item.id) >= 0 ? (
+                          <div className="Box-active"></div>
+                        ) : (
+                          <div className="Box"></div>
+                        )}
                       </div>
 
                       <div className="color__name">{item.name} </div>
@@ -75,9 +106,14 @@ const Catalog = () => {
                 <div className="sizes__content">
                   {sizes.map((item, index) => (
                     <div className="sizes__item" key={index}>
-                      <div className="size__check" onClick={handleSelectClothe}>
-                        <div
-                          className={selectClothe ? "Box" : "Box-active"}></div>
+                      <div
+                        className="size__check"
+                        onClick={onClickSelectSize.bind(this, item)}>
+                        {selectSize.findIndex((x) => x === item.id) >= 0 ? (
+                          <div className="Box-active"></div>
+                        ) : (
+                          <div className="Box"></div>
+                        )}
                       </div>
 
                       <div className="size__name">{item.size} </div>
