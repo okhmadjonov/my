@@ -71,6 +71,20 @@ const Header = () => {
               onClick={() => setCount(1)}
               className={step1 ? "menu_link_active" : "menu_link"}>
               {t("headerTitle.1")}
+
+              {/* <div className="catalog__container">
+                <Link className="catlog__link">Платья </Link>
+                <Link className="catlog__link">Юбки </Link>
+                <Link className="catlog__link">Блузки </Link>
+                <Link className="catlog__link">Футболки, топы </Link>
+                <Link className="catlog__link">Худи, свитшоты</Link>
+                <Link className="catlog__link">Жакеты, жилеты</Link>
+                <Link className="catlog__link">Брюки, шорты</Link>
+                <Link className="catlog__link">Джинсы</Link>
+                <Link className="catlog__link">Комбинезоны</Link>
+                <Link className="catlog__link">Спортивные костюмы</Link>
+                <Link className="catlog__link">Пальто, плащи, куртки</Link>
+              </div> */}
             </Link>
             <Link
               to="/lookbook"

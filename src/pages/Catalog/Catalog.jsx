@@ -1,12 +1,15 @@
-import React, { useState } from "react";
-import catalogData from "./catalodData";
+import React, { useEffect, useState } from "react";
+
 import { BsHeart } from "react-icons/bs";
 import "./Catalog.scss";
+import { useDispatch, useSelector } from "react-redux";
+
 import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import clothes from "./clothes";
 import colors from "./colors";
 import sizes from "./sizes";
+import { getAllProducts } from "../../reduxToolkit/productSlice";
 const Catalog = () => {
   const [selectedClothes, setSelectedClothes] = useState([]);
 
@@ -36,6 +39,13 @@ const Catalog = () => {
     else selectSize.push(item.id);
     setSelectSize([...selectSize]);
   };
+
+  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.products);
+
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, []);
 
   return (
     <div className="catalog">
@@ -156,7 +166,7 @@ const Catalog = () => {
             <div className="catalog__inner__bottom__right">
               {/* Right Side */}
               <div className="catalog__products">
-                {catalogData.map((item, index) => (
+                {products.map((item, index) => (
                   <div key={item.id} className="catalog__card">
                     <div
                       className="card__img"
