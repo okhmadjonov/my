@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { BsHeart } from "react-icons/bs";
 import "./Catalog.scss";
 import catalogData from "./catalodData.js";
 import { Link } from "react-router-dom";
-
+import { useDispatch, useSelector } from "react-redux";
+import { getAllProducts } from "../../../../reduxToolkit/productSlice";
 const Catalog = () => {
+  const dispatch = useDispatch();
+  const { products } = useSelector((state) => state.products);
+
+  useEffect(() => {
+    dispatch(getAllProducts());
+  }, []);
   return (
     <div className="catalog1">
       <div className="catalog__container1">
@@ -13,7 +20,7 @@ const Catalog = () => {
           <h2>КАТАЛОГ</h2>
         </div>
         <div className="catalog__products">
-          {catalogData.map((item, index) => (
+          {products.map((item, index) => (
             <div key={item.id} className="catalog__card">
               <div
                 className="card__img"
